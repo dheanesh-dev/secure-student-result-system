@@ -1,15 +1,19 @@
-def student_menu():
-    while True:
-        print("\n--- Student Menu ---")
-        print("1. View Result")
-        print("2. Exit")
+from results import view_student_result
 
-        choice = input("Enter your choice: ")
+
+def student_menu(user):
+    while True:
+        print("\n=== STUDENT MENU ===")
+        print("1. View My Result")
+        print("2. Logout")
+
+        choice = input("Select: ").strip()
 
         if choice == "1":
-            print("Showing student result (demo)")
+            view_student_result(user["username"])
+
         elif choice == "2":
-            print("Exiting student menu...")
             break
+
         else:
-            print("Invalid choice. Try again.")
+            print("Invalid choice")

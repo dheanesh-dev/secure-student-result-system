@@ -1,90 +1,36 @@
-import json
-import os
-
-RESULTS_FILE = "data/results.json"
-USERS_FILE = "data/users.json"
-
-
-def load_results():
-    if not os.path.exists(RESULTS_FILE):
-        return []
-    with open(RESULTS_FILE, "r") as f:
-        return json.load(f)
+from results import (
+    add_result,
+    update_result,
+    delete_result,
+    view_all_results
+)
 
 
-def save_results(results):
-    with open(RESULTS_FILE, "w") as f:
-        json.dump(results, f, indent=4)
+def admin_menu(user):
+    while True:
+        print("\n=== Admin Menu ===")
+        print("1. Add Result")
+        print("2. Update Result")
+        print("3. Delete Result")
+        print("4. View All Results")
+        print("5. Logout")
 
+        choice = input("Select: ").strip()
 
-def load_users():
-    if not os.path.exists(USERS_FILE):
-        return []
-    with open(USERS_FILE, "r") as f:
-        return json.load(f)
+        if choice == "1":
+            add_result()
 
+        elif choice == "2":
+            update_result()
 
-def add_student():
-    users = load_users()
-    results = load_results()
+        elif choice == "3":
+            delete_result()
 
-    roll_no = input("Enter Roll No: ")
-    name = input("Enter Student Name: ")
-    password = input("Create Password: ")
+        elif choice == "4":
+            view_all_results()
 
-    # Check if student already exists
-    for user in users:
-        if user["roll_no"] == roll_no:
-            print("❌ Student already exists!")
-            return
+        elif choice == "5":
+            break
 
-    users.append({
-        "roll_no": roll_no,
-        "name": name,
-        "password": password,
-        "role": "student"
-    })
-
-    results.append({
-        "roll_no": roll_no,
-        "name": name,
-        "marks": {}
-    })
-
-    with open(USERS_FILE, "w") as f:
-        json.dump(users, f, indent=4)
-
-    save_results(results)
-
-    print("✅ Student added successfully!")
-
-
-def update_marks():
-    results = load_results()
-    roll_no = input("Enter Roll No: ")
-
-    for student in results:
-        if student["roll_no"] == roll_no:
-            student["marks"]["Maths"] = int(input("Maths: "))
-            student["marks"]["Science"] = int(input("Science: "))
-            student["marks"]["English"] = int(input("English: "))
-
-            save_results(results)
-            print("✅ Marks updated successfully!")
-            return
-
-    print("❌ Student not found!")
-
-
-def view_all_results():
-    results = load_results()
-
-    if not results:
-        print("No student records found.")
-        return
-
-    for student in results:
-        print("\n-----------------------")
-        print("Roll No :", student["roll_no"])
-        print("Name    :", student["name"])
-        print("Marks   :", student["marks"])
+        else:
+            print("Invalid choice")

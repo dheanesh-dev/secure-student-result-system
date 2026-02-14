@@ -1,1 +1,14 @@
-{}
+{
+    "dheanesh1": {
+        "password": "6d26125d09beba457660c9ea7bbcac1f9dc566904608824db6ff608e9a070e38",
+        "role": "admin"
+    },
+    "dhanush1": {
+        "password": "b1074aeaa07e2408f46eee7acfcc99237196ee6a85844dfac0913c9ba887f2aa",
+        "role": "teacher"
+    },
+    "dharani1": {
+        "password": "282c49bb45774b26d00a9031ccb5fc75d9fbe52945df4f901ff492e1b76dc88f",
+        "role": "student"
+    }
+}
