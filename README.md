@@ -101,5 +101,5 @@ REST API using Flask / FastAPI
 Frontend integration
 
 👤 Author
-Dheaneswaran M
+Dheaneswaran
 
