@@ -36,8 +36,9 @@ Built step-by-step as a learning project and structured for GitHub.
 - View all stored results
 
 ### 👨‍🎓 Student Capabilities
-- Secure login  
-- *(Result access under development)*
+- Secure login
+- View own academic result
+
 
 ---
 
