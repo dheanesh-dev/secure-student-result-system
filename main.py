@@ -1,39 +1,23 @@
-from auth import register_user, login_user
 from admin import admin_menu
 from student import student_menu
 
-
 def main():
     while True:
-        print("\n=== Secure Student Result Management System ===")
-        print("1. Register")
-        print("2. Login")
+        print("\n--- Student Result Management System ---")
+        print("1. Admin")
+        print("2. Student")
         print("3. Exit")
 
-        choice = input("Select an option: ").strip()
+        choice = input("Enter your choice: ")
 
         if choice == "1":
-            register_user()
-
+            admin_menu()
         elif choice == "2":
-            user = login_user()
-            if user:
-                role = user.get("role")
-
-                if role == "admin":
-                    admin_menu(user)
-                elif role == "student":
-                    student_menu(user)
-                else:
-                    print("❌ Unknown role. Contact admin.")
-
+            student_menu()
         elif choice == "3":
-            print("👋 Exiting system. Bye!")
+            print("Goodbye!")
             break
-
         else:
-            print("❌ Invalid choice. Try again.")
+            print("Invalid choice")
 
-
-if __name__ == "__main__":
-    main()
+main()
