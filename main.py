@@ -1,40 +1,44 @@
-from auth import register_user, login_user
+from auth import login_user, register_user
 from admin import admin_menu
-from student import student_menu
 from teacher import teacher_menu
-
+from student import student_menu
 
 
 def main():
     while True:
-        print("\n=== Secure Student Result Management System ===")
+        print("\n=== STUDENT RESULT MANAGEMENT SYSTEM ===")
         print("1. Register")
         print("2. Login")
         print("3. Exit")
 
-        choice = input("Select an option: ").strip()
+        choice = input("Select: ").strip()
 
         if choice == "1":
             register_user()
 
         elif choice == "2":
             user = login_user()
-            if user:
-                role = user.get("role")
 
-                if role == "admin":
+            if user:
+                # 🔑 ROLE-BASED ROUTING (THIS WAS MISSING)
+                if user["role"] == "admin":
                     admin_menu(user)
-                elif role == "student":
+
+                elif user["role"] == "teacher":
+                    teacher_menu(user)
+
+                elif user["role"] == "student":
                     student_menu(user)
+
                 else:
-                    print("❌ Unknown role. Contact admin.")
+                    print("Unknown role")
 
         elif choice == "3":
-            print("👋 Exiting system. Bye!")
+            print("Goodbye!")
             break
 
         else:
-            print("❌ Invalid choice. Try again.")
+            print("Invalid choice")
 
 
 if __name__ == "__main__":
