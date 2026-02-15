@@ -1,106 +1,90 @@
-div align="center">
+# 🎓 Student Result Management System (CLI)
 
-# 🎓 Secure Student Result Management System  
-### Python CLI • Backend Project • Role-Based Access
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Status](https://img.shields.io/badge/Status-Stable-success)
+![CLI](https://img.shields.io/badge/Interface-CLI-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-A clean and modular **Python backend CLI application** focused on  
-authentication, role separation, and structured data handling.
-
-</div>
-
----
-
-## ✨ Overview
-
-This project demonstrates how a **real-world backend system** can be designed using:
-- Modular Python files
-- Role-based logic (Admin / Student)
-- Persistent storage (JSON)
-- Clear separation of responsibilities
-
-Built step-by-step as a learning project and structured for GitHub.
+A **Python-based Command Line application** that manages student academic results using **role-based access control**.  
+Designed to demonstrate backend logic, authentication, and clean project structure.
 
 ---
 
-## 🚀 Key Features
+## 🚀 Features
 
-### 🔐 Authentication
-- User registration
-- User login
-- Role assignment (admin / student)
+### 👑 Admin
+- Add student results  
+- Update student results  
+- Delete student results  
+- View all student results  
 
-### 👨‍💼 Admin Capabilities
-- Add student results
-- Update student results
-- Delete student results
-- View all stored results
+### 🧑‍🏫 Teacher
+- Add student results  
+- Update student results  
 
-### 👨‍🎓 Student Capabilities
-- Secure login
-- View own academic result
-
+### 👨‍🎓 Student
+- Secure login  
+- View **only their own** academic result  
 
 ---
 
-## 🗂️ Project Structure
+## 🔐 Role-Based Access Control
 
-```text
-auth-system/
+This system enforces strict role permissions:
+- **Admin** → full access  
+- **Teacher** → limited result management  
+- **Student** → read-only access (own data only)
+
+Unauthorized access is prevented by design.
+
+---
+
+## 📁 Project Structure
+
+student-result-management-system/
 │
-├── main.py          → Application entry point
-├── auth.py          → Authentication logic
-├── admin.py         → Admin operations
-├── student.py       → Student operations
-│
+├── main.py # Application entry point
+├── auth.py # Login & registration logic
+├── admin.py # Admin menu & actions
+├── teacher.py # Teacher menu & actions
+├── student.py # Student menu & actions
+├── results.py # Result management logic
 ├── data/
-│   ├── users.json   → Registered users
-│   └── results.json → Student results
-│
-├── .gitignore
-└── README.md
-⚙️ Requirements
-Python 3.10+
+│ ├── users.json # User credentials & roles
+│ └── results.json # Student results data
 
-No external dependencies
 
-Runs entirely in the terminal (CLI)
+---
 
-▶️ How to Run
+## ▶️ How to Run
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/student-result-management-system.git
+cd student-result-management-system
+2️⃣ Run the application
 python main.py
-⚠️ Ensure both JSON files contain:
+🛠 Technologies Used
+Python 3
 
-[]
-🧪 How to Test
-Register a new user
+JSON (file-based storage)
 
-Choose role: admin or student
+CLI (Command Line Interface)
 
-Login using credentials
+📌 Project Status
+✅ Version 1.0 – Completed & Stable
 
-Admin can manage student results
+🎯 Learning Outcomes
+Python modular programming
 
-🎯 What This Project Demonstrates
-Backend thinking without frameworks
+Role-based authentication
 
-Clean modular Python design
+File-based data persistence
 
-Role-based access control
+Real-world debugging & Git workflow
 
-JSON-based persistence
-
-Git & GitHub best practices
-
-🔮 Future Enhancements
-Student-specific result access
-
-Password hashing
-
-Database integration (SQLite)
-
-REST API using Flask / FastAPI
-
-Frontend integration
+Clean backend project structuring
 
 👤 Author
-Dheaneswaran
-
+Dheaneswaran M
+GitHub: https://github.com/your-username
