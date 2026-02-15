@@ -4,9 +4,10 @@
 ![Status](https://img.shields.io/badge/Status-Stable-success)
 ![CLI](https://img.shields.io/badge/Interface-CLI-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
+![GitHub](https://img.shields.io/badge/GitHub-dheanesh--dev-black?logo=github)
 
-A **Python-based Command Line application** that manages student academic results using **role-based access control**.  
-Designed to demonstrate backend logic, authentication, and clean project structure.
+A **Python-based Command Line Interface (CLI) application** that manages student academic results using **role-based access control**.  
+This project demonstrates backend logic, authentication, authorization, and clean modular design.
 
 ---
 
@@ -24,18 +25,19 @@ Designed to demonstrate backend logic, authentication, and clean project structu
 
 ### 👨‍🎓 Student
 - Secure login  
-- View **only their own** academic result  
+- View **only their own** academic results  
 
 ---
 
 ## 🔐 Role-Based Access Control
 
-This system enforces strict role permissions:
-- **Admin** → full access  
-- **Teacher** → limited result management  
-- **Student** → read-only access (own data only)
+The system enforces strict role permissions:
 
-Unauthorized access is prevented by design.
+- **Admin** → Full access to all operations  
+- **Teacher** → Limited result management  
+- **Student** → Read-only access to personal results  
+
+Each user can access **only what their role allows**.
 
 ---
 
@@ -44,23 +46,23 @@ Unauthorized access is prevented by design.
 student-result-management-system/
 │
 ├── main.py # Application entry point
-├── auth.py # Login & registration logic
-├── admin.py # Admin menu & actions
-├── teacher.py # Teacher menu & actions
-├── student.py # Student menu & actions
-├── results.py # Result management logic
+├── auth.py # Authentication & registration logic
+├── admin.py # Admin menu & operations
+├── teacher.py # Teacher menu & operations
+├── student.py # Student menu & operations
+├── results.py # Result handling logic
 ├── data/
-│ ├── users.json # User credentials & roles
-│ └── results.json # Student results data
+│ ├── users.json # Stores users & roles
+│ └── results.json # Stores student results
 
 
 ---
 
-## ▶️ How to Run
+## ▶️ How to Run the Project
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-username/student-result-management-system.git
+git clone https://github.com/dheanesh-dev/student-result-management-system.git
 cd student-result-management-system
 2️⃣ Run the application
 python main.py
@@ -77,14 +79,15 @@ CLI (Command Line Interface)
 🎯 Learning Outcomes
 Python modular programming
 
-Role-based authentication
+Role-based authentication & authorization
 
-File-based data persistence
+File-based data persistence using JSON
 
-Real-world debugging & Git workflow
+Debugging real-world Python errors
 
-Clean backend project structuring
+Git & GitHub workflow (commit, push, versioning)
 
 👤 Author
 Dheaneswaran M
-GitHub: https://github.com/your-username
+GitHub: https://github.com/dheanesh-dev
+
