@@ -51,10 +51,10 @@ student-result-management-system/
 ├── teacher.py # Teacher menu & operations
 ├── student.py # Student menu & operations
 ├── results.py # Result handling logic
-├── data/
-│ ├── users.json # Stores users & roles
-│ └── results.json # Stores student results
-
+│
+└── data/
+├── users.json # Stores users & roles
+└── results.json # Stores student results
 
 ---
 
