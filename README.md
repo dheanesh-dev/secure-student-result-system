@@ -42,18 +42,22 @@ Each user can access **only what their role allows**.
 ---
 
 ## 📁 Project Structure
+
+```text
 student-result-management-system/
 │
-├── main.py # Application entry point
-├── auth.py # Authentication & registration logic
-├── admin.py # Admin menu & operations
-├── teacher.py # Teacher menu & operations
-├── student.py # Student menu & operations
-├── results.py # Result handling logic
+├── main.py        # Application entry point
+├── auth.py        # Authentication & registration logic
+├── admin.py       # Admin menu & operations
+├── teacher.py     # Teacher menu & operations
+├── student.py     # Student menu & operations
+├── results.py     # Result handling logic
 │
 └── data/
-├── users.json # Stores users & roles
-└── results.json # Stores student results
+    ├── users.json     # Stores users & roles
+    └── results.json   # Stores student results
+```
+
 
 ---
 
