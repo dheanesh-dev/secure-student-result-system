@@ -1,6 +1,8 @@
 from auth import register_user, login_user
 from admin import admin_menu
 from student import student_menu
+from teacher import teacher_menu
+
 
 
 def main():
