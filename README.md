@@ -42,7 +42,6 @@ Each user can access **only what their role allows**.
 ---
 
 ## 📁 Project Structure
-
 student-result-management-system/
 │
 ├── main.py # Application entry point
